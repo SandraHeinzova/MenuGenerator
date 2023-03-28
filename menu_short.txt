@@ -1,0 +1,8 @@
+﻿Pondělí - food0
+Úterý - food0
+Středa - food1
+Čtvrtek - food1
+Pátek - food2
+Sobota - food3
+Neděle - food3
+
