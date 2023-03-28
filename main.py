@@ -8,8 +8,8 @@ from email.message import EmailMessage
 today = date.today()
 menu_list = []
 amount = 0
-my_email = "heinzova.sandra@gmail.com"
-password = "nvyyompybzvfytzc"
+my_email = "examle@example.com"
+password = "password"
 global nw_entry_email
 nw_entry_email = None
 
