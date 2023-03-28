@@ -1,6 +1,8 @@
 # MenuGenerator
 ***Program which randomly chooses meals for a whole week***
 
+-> without valid email and your password key it will not work! <-
+
 Almost three times a week we discuss what to cook for lunches. Pretty hard to figure it out sometimes :D 
 So I decided to write a program which will help. 
 And here it is! 
