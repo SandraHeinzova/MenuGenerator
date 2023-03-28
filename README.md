@@ -20,13 +20,13 @@ The UI of the program is in Czech language, so I can show it also to my husband 
 But the code is in English, so feel free to check it out! 
 
 
-![2023-03-28 (6)](https://user-images.githubusercontent.com/110200002/228263545-bca7f329-5385-4c1a-a74e-705295d17394.png)
+![2023-03-28 (6)](https://user-images.githubusercontent.com/110200002/228290673-6d1cad45-0eac-4888-ac46-681d4637b7d9.png)
 
 Messagebox with information, that new meal was succesfully added.
 
 ![2023-03-28 (3)](https://user-images.githubusercontent.com/110200002/228266096-01fb34af-bb49-48c0-9854-2c7409119d3e.png)
 
-Messagebox that tells user that the meal the user wants to add is already in the file. 
+Messagebox that tells user that the meal the user wants to add is already in the file.
 
 ![2023-03-28 (4)](https://user-images.githubusercontent.com/110200002/228266107-6b022756-f009-4d23-9e0d-830ab6fe9414.png)
 
