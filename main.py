@@ -9,7 +9,7 @@ today = date.today()
 menu_list = []
 amount = 0
 my_email = "heinzova.sandra@gmail.com"
-password = "nvyyompybzvfytzc"
+password = "gevyphukpbcfjxho"
 global nw_entry_email
 nw_entry_email = None
 
@@ -39,8 +39,7 @@ def random_foods(amounts):
     with open("meals.txt", "r", encoding="utf-8") as meals:
         meal = list(meals)
 
-    for x in range(amounts):
-        menu_list.append(random.choice(meal))
+    menu_list = random.sample(meal, amounts)
 
     for y in menu_list:
         menu_text += y
