@@ -3,6 +3,14 @@
 
 -> without valid email and your password key it will not work! <-
 
+-- Requirments -- <br />
+-> module Tkinter <br />
+-> module random <br />
+-> module smtplib <br />
+-> module email.message (EmailMesssage) <br />
+-> all the files <br />
+-> your own email adress and password to give access to program to send emails <br />
+
 Almost three times a week we discuss what to cook for lunches. Pretty hard to figure it out sometimes :D 
 So I decided to write a program which will help. 
 And here it is! 
