@@ -1,3 +1,4 @@
+import pathlib
 import random
 from tkinter import *
 from tkinter import messagebox
@@ -12,13 +13,16 @@ my_email = "heinzova.sandra@gmail.com"
 password = "gevyphukpbcfjxho"
 global nw_entry_email
 nw_entry_email = None
+complete_menu = ""
+p = pathlib.Path(__file__).resolve().parents[0]
 
 
 # ------------- function body -------------
 def printable(txt, sheet):
-    with open(f"C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/{sheet}.txt", "r", encoding="utf-8") as file:
-        complete_menu = ""
-        for line in file:
+    global complete_menu
+    file = p / f"{sheet}.txt"
+    with file.open(encoding="utf-8") as f:
+        for line in f:
             line = line.strip()
             for x in range(len(txt)):
                 new_line = line.replace(f"food{x}", txt[x])
@@ -27,14 +31,14 @@ def printable(txt, sheet):
                 else:
                     continue
 
-    with open(f"C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/menu-{today}.txt", "w", encoding="utf-8") \
-            as print_menu:
-        print_menu.write(complete_menu)
+    print_menu = p / f"menu-{today}.txt"
+    print_menu.write_text(complete_menu, encoding="utf-8")
 
 
 def random_foods(amounts):
     global nw_entry_email
     global send_to
+    global menu_list
     menu_text = ""
     with open("meals.txt", "r", encoding="utf-8") as meals:
         meal = list(meals)
