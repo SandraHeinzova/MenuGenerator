@@ -1,5 +1,6 @@
 import pathlib
 import random
+import os
 from tkinter import *
 from tkinter import messagebox
 from datetime import date
@@ -9,8 +10,8 @@ from email.message import EmailMessage
 today = date.today()
 menu_list = []
 amount = 0
-my_email = "heinzova.sandra@gmail.com"
-password = "gevyphukpbcfjxho"
+my_email = os.environ.get("MyEmail")
+password = os.environ.get("PasswordEmail")
 global nw_entry_email
 nw_entry_email = None
 complete_menu = ""
