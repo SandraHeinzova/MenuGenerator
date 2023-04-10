@@ -5,6 +5,8 @@
 
 -- Requirments -- <br />
 -> module Tkinter <br />
+-> module pathlib <br />
+-> module os <br />
 -> module random <br />
 -> module smtplib <br />
 -> module email.message (EmailMesssage) <br />
