@@ -6,6 +6,9 @@ from tkinter import messagebox
 from datetime import date
 import smtplib
 from email.message import EmailMessage
+import requests
+from googletrans import Translator
+
 
 today = date.today()
 menu_list = []
@@ -69,6 +72,10 @@ def random_foods(amounts):
     nw_button = Button(new_window, text="Pošli na mail", command=send)
     nw_button.grid(column=0, row=4)
 
+    nw_label3 = Label(new_window, text=quote())
+    nw_label3.grid(column=0, row=5)
+    nw_label3.config(bg="#3795BD", fg="#3A1078", wraplength=300)
+
 
 def send():
     send_to = nw_entry_email.get()
@@ -130,11 +137,28 @@ def add_new_meal():
             messagebox.showinfo(title="Nepřidáno", message="Toto jídlo již v seznamu je!")
 
 
+def quote():
+    category = 'food'
+    MY_API_KEY = "v4GWQ2IyOh6byNqbsSF5Qg==C8xMYYnONrksdAeW"
+    api_url = 'https://api.api-ninjas.com/v1/quotes?category={}'.format(category)
+    response = requests.get(api_url, headers={'X-Api-Key': MY_API_KEY})
+    if response.status_code == requests.codes.ok:
+        data = response.json()
+        quote = data[0]["quote"]
+        author = data[0]["author"]
+        translator = Translator()
+        translated_quote = translator.translate(quote, dest="cs")
+        return translated_quote.text
+    else:
+        print("Error:", response.status_code, response.text)
+
+
 # ------------- ui body -------------
 
 window = Tk()
 window.title("Menu Generator")
 window.geometry("375x425+450+250")
+window.resizable(width=False, height=False)
 window.config(pady=20, padx=20, bg="#3795BD")
 
 #  labels
