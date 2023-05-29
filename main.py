@@ -85,7 +85,7 @@ def send():
         msg["Subject"] = "Menu"
         msg["To"] = send_to
         msg.set_content("Bon Appetite!")
-        msg.add_attachment(open(f"C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/menu-{today}.txt",
+        msg.add_attachment(open(f"menu-{today}.txt",
                                 "r", encoding="utf-8").read(), filename="Menu.txt")
 
         with smtplib.SMTP("smtp.gmail.com") as connection:
@@ -183,19 +183,19 @@ seven_meals.config(padx=10, pady=10, bg="#3795BD", fg="#3A1078")
 seven_meals.grid(column=1, row=3, sticky=E)
 
 # buttons
-one = PhotoImage(file="C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/one.png")
+one = PhotoImage(file="one.png")
 generate1 = Button(text="1", image=one, command=choose_one)
 generate1.grid(column=2, row=1, sticky=W)
 
-four = PhotoImage(file="C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/four.png")
+four = PhotoImage(file="four.png")
 generate4 = Button(text="4", image=four, command=choose_four)
 generate4.grid(column=2, row=2, sticky=W)
 
-seven = PhotoImage(file="C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/seven.png")
+seven = PhotoImage(file="seven.png")
 generate7 = Button(text="7", image=seven, command=choose_seven)
 generate7.grid(column=2, row=3, sticky=W)
 
-photo = PhotoImage(file="C:/Users/42072/Desktop/PycharmProjects/MenuGenerator/food.png")
+photo = PhotoImage(file="food.png")
 add = Button(image=photo, command=add_new_meal)
 add.config(pady=20, padx=10)
 add.grid(column=1, row=6, columnspan=2)
